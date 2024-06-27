@@ -4,6 +4,7 @@
     <p class="welcome-message mt-6 text-2xl">
       Software Engineering graduate from Concordia University
     </p>
+    <SocialIcons />
   </div>
 </template>
 
@@ -22,5 +23,14 @@
 .welcome-message {
   font-family: "Cairo Play", sans-serif;
   /* update font */
+}
+
+@media screen and (max-width: 768px) {
+  .welcome-section {
+    margin: 0px 100px 100px 50px;
+  }
+  .welcome-message {
+    font-size: large;
+  }
 }
 </style>
