@@ -2,7 +2,7 @@
   <div class="welcome-section">
     <h1 class="welcome-title text-6xl ">I'm Michael Roubeiz</h1>
     <p class="welcome-message mt-6 text-2xl font-['Roboto_Mono']">
-      Software Engineering graduate from Concordia University
+      Software Engineering graduate from Concordia University.
     </p>
     <!-- TODO: Move this component and style it -->
     <SocialIcons />
