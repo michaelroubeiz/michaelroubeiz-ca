@@ -5,6 +5,7 @@ export default defineNuxtConfig({
   googleFonts: {
     families: {
       "Cairo Play": true,
+      "Playwrite MX": true,
     },
     display: "swap",
     download: true,

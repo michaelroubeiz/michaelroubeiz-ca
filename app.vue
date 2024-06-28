@@ -1,12 +1,6 @@
 <template>
-  <div>
+  <NuxtLayout>
     <NavBar />
-    <WelcomeSection />
-  </div>
+    <NuxtPage />
+  </NuxtLayout>
 </template>
-
-<style>
-body {
-  background-color: #020420;
-}
-</style>

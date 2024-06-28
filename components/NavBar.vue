@@ -1,39 +1,30 @@
-<template>
-  <nav class="mt-5 p-10 flex justify-between items-center">
-    <UIcon
-      name="meteocons:dust-wind-fill"
-      class="text-white text-6xl"
-      dynamic
-    />
-    <ul class="flex space-x-4">
-      <!-- Turn this into a component to reduce repetition -->
-      <li>
-        <UButton :class="buttonClass" variant="link" color="white"
-          >About</UButton
-        >
-      </li>
-      <li>
-        <UButton :class="buttonClass" variant="link" color="white"
-          >Experience</UButton
-        >
-      </li>
-      <li>
-        <UButton :class="buttonClass" variant="link" color="white"
-          >Projects</UButton
-        >
-      </li>
-      <!-- Turn this into a component to reduce repetition -->
-      <!-- <li><UButton variant="ghost"><UIcon class="font-bold" name="ph:moon" dynamic/></UButton></li> -->
-    </ul>
-  </nav>
-</template>
+<script setup lang="ts">
+const route = useRoute();
 
-<script>
-export default {
-  computed: {
-    buttonClass() {
-      return ["text-white", "text-lg", "font-medium"];
-    },
+const links = [
+  {
+    label: "About",
+    icon: "i-heroicons-home",
+    to: "/",
   },
-};
+  {
+    label: "Experience",
+    icon: "i-heroicons-chart-bar",
+    to: "/experience",
+  },
+  {
+    label: "Projects",
+    icon: "i-heroicons-command-line",
+    to: "/projects",
+  },
+];
 </script>
+
+<template>
+  <div
+    class="mt-5 px-8 border-b border-gray-200 dark:border-gray-800 justify-between flex flex-row items-center"
+  >
+    <ULink to="/" class="font-['Playwrite_MX']">MR</ULink>
+    <UHorizontalNavigation :links="links" class="w-auto" />
+  </div>
+</template>

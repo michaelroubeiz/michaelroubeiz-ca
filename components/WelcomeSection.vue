@@ -4,6 +4,7 @@
     <p class="welcome-message mt-6 text-2xl">
       Software Engineering graduate from Concordia University
     </p>
+    <!-- TODO: Move this component and style it -->
     <SocialIcons />
   </div>
 </template>
