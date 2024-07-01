@@ -1,7 +1,7 @@
 <template>
   <div class="welcome-section">
-    <h1 class="welcome-title text-6xl ">I'm Michael Roubeiz</h1>
-    <p class="welcome-message mt-6 text-2xl font-['Roboto_Mono']">
+    <h1 class="welcome-title text-6xl font-cairo">I'm Michael Roubeiz</h1>
+    <p class="welcome-message mt-6 text-2xl font-roboto-mono">
       Software Engineering graduate from Concordia University.
     </p>
     <!-- TODO: Move this component and style it -->
@@ -17,9 +17,9 @@
   color: white;
 }
 
-.welcome-title {
+/* .welcome-title {
   font-family: "Cairo Play", sans-serif;
-}
+} */
 
 /* .welcome-message {
   font-family: "Cairo Play", sans-serif;

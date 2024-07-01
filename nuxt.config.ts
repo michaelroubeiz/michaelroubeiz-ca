@@ -6,7 +6,6 @@ export default defineNuxtConfig({
     families: {
       "Cairo Play": true,
       "Playwrite MX": true,
-      "Roboto": true,
       "Roboto Mono": true
     },
     display: "swap",

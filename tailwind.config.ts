@@ -10,7 +10,11 @@ export default <Partial<Config>>{
             },
             fontFamily: {
                 'cairo': ['Cairo Play', 'sans-serif'],
-                'playwrite': ['Playwrite MX', 'cursive']
+                'playwrite': ['Playwrite MX', 'cursive'],
+                'roboto-mono': ['Roboto Mono', 'monospace'],
+            },
+            colors: {
+                primary: '#dc2626'
             },
         },
     }

@@ -24,7 +24,7 @@ const links = [
   <div
     class="mt-5 px-8 border-b border-gray-200 dark:border-gray-800 justify-between flex flex-row items-center"
   >
-    <ULink to="/" class="font-['Playwrite_MX']">MR</ULink>
-    <UHorizontalNavigation :links="links" class="w-auto font-['Roboto_Mono']" />
+    <ULink to="/" class="bg-primary-400 font-playwrite">MR</ULink>
+    <UHorizontalNavigation :links="links" class="w-auto font-roboto-mono" />
   </div>
 </template>
