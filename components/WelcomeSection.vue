@@ -10,21 +10,6 @@
 </template>
 
 <style scoped>
-.welcome-section {
-  margin: 100px 100px 100px 150px;
-  justify-content: left;
-  align-items: center;
-  color: white;
-}
-
-/* .welcome-title {
-  font-family: "Cairo Play", sans-serif;
-} */
-
-/* .welcome-message {
-  font-family: "Cairo Play", sans-serif;
-} */
-
 @media screen and (max-width: 768px) {
   .welcome-section {
     margin: 0px 100px 100px 50px;
