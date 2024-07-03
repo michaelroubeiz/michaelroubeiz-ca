@@ -13,6 +13,7 @@ export const experience = [
             'Managed releases on Microsoft App Center with Azure DevOps support',
             'Assisted in onboarding new employees by detailing environment setup and essential processes'],
         technologies: [],
+        color: 'red',
     },
     {
         id: 2,
@@ -28,6 +29,7 @@ export const experience = [
             'Took on the role of Scrum master, successfully managing backlog review and cleanup'
         ],
         technologies: [],
+        color: 'green',
     },
     {
         id: 3,
@@ -43,5 +45,6 @@ export const experience = [
             'Achieved Champion Learner Gold recognition by completing 200 hours of learning and certifications'
         ],
         technologies: [],
+        color: 'blue'
     }
 ]

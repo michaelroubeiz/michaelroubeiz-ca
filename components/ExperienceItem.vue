@@ -1,9 +1,11 @@
 <template>
-  <div name="experience-box" class="my-6">
+  <div name="experience-box" class="my-6 font-roboto-mono">
     <div name="experience-title-company">
-      {{ experience.title }} @ {{ experience.company }}
+      {{ experience.title }} @
+      <span :class="'text-' + experience.color + '-400'">{{
+        experience.company
+      }}</span>
     </div>
-    <!-- <div name="experience-location">{{ experience[0].location }}</div> -->
     <div name="experience-image">{{ experience.image }}</div>
     <div name="experience-date">
       {{ experience.startDate }} - {{ experience.endDate }}

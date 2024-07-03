@@ -1,26 +1,21 @@
 <template>
-  <!-- TODO: make title component -->
   <div>
-    <div class="text-6xl font-cairo">Experience</div>
-    <div name="experience-section" class="font-roboto-mono">
-      <ExperienceItem
-        v-for="item in experience"
-        :key="item.id"
-        :experience="item"
-      />
-    </div>
+    <PageTitle :title="title" />
+    <ExperienceList :experience="experience" />
   </div>
 </template>
 
 <script>
 import { experience } from "../data/experience.ts";
-import ExperienceItem from "../components/ExperienceItem.vue";
+import ExperienceList from "../components/ExperienceList.vue";
+import PageTitle from "../components/PageTitle.vue";
 
 export default {
   name: "Experience",
-  components: { ExperienceItem },
+  components: { PageTitle, ExperienceList },
   data() {
     return {
+      title: "Experience",
       experience,
     };
   },

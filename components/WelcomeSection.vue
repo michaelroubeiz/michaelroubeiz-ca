@@ -1,6 +1,6 @@
 <template>
   <div class="welcome-section">
-    <h1 class="welcome-title text-6xl font-cairo">I'm Michael Roubeiz</h1>
+    <PageTitle :title="title" />
     <p class="welcome-message mt-6 text-2xl font-roboto-mono">
       Software Engineering graduate from Concordia University.
     </p>
@@ -8,6 +8,20 @@
     <SocialIcons />
   </div>
 </template>
+
+<script>
+import PageTitle from "../components/PageTitle.vue";
+
+export default {
+  name: "WelcomeSection",
+  components: { PageTitle },
+  data() {
+    return {
+      title: "I'm Michael Roubeiz",
+    };
+  },
+};
+</script>
 
 <style scoped>
 @media screen and (max-width: 768px) {
