@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="grid grid-cols-2 gap-6 my-6 font-roboto-mono">
     <slot :projectList="projectList"></slot>
   </div>
 </template>
