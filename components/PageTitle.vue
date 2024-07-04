@@ -2,7 +2,7 @@
   <div class="text-6xl font-cairo" v-text="title"></div>
 </template>
 
-<script>
+<script lang="ts">
 export default {
   name: "PageTitle",
   props: {

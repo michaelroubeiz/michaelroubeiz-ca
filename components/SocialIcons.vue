@@ -10,8 +10,8 @@
   </ULink>
 </template>
 
-<script>
-import { socialLinks } from "../data/socialLinks.ts";
+<script lang="ts">
+import { socialLinks } from "../data/socialLinks";
 
 export default {
   data() {

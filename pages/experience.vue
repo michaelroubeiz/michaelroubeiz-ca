@@ -1,12 +1,12 @@
 <template>
   <div>
     <PageTitle :title="title" />
-    <ExperienceList :experience="experience" />
+    <ExperienceList :experienceData="experienceData" />
   </div>
 </template>
 
-<script>
-import { experience } from "../data/experience.ts";
+<script lang="ts">
+import { experienceData } from "../data/experience";
 import ExperienceList from "../components/ExperienceList.vue";
 import PageTitle from "../components/PageTitle.vue";
 
@@ -16,7 +16,7 @@ export default {
   data() {
     return {
       title: "Experience",
-      experience,
+      experienceData,
     };
   },
 };

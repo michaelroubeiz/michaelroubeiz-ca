@@ -6,22 +6,24 @@
   />
 </template>
 
-<script>
+<script lang="ts">
 import ExperienceItem from "../components/ExperienceItem.vue";
+import type { Experience } from "../types/Experience";
 
 export default {
   name: "Experience",
   components: { ExperienceItem },
   props: {
-    experience: {
-      type: Array,
+    experienceData: {
+      type: Array as () => Experience[],
       required: true,
     },
   },
   computed: {
     sortedExperience() {
-      return this.experience.sort(
-        (a, b) => new Date(b.endDate) - new Date(a.endDate)
+      return this.experienceData.sort(
+        (a: Experience, b: Experience) =>
+          new Date(b.endDate).getTime() - new Date(a.endDate).getTime()
       );
     },
   },

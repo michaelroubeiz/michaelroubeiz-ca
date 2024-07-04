@@ -1,6 +1,13 @@
-<script setup lang="ts">
-const route = useRoute();
+<template>
+  <div
+    class="mt-5 px-8 border-b border-gray-200 dark:border-gray-800 justify-between flex flex-row items-center"
+  >
+    <ULink to="/" class="font-playwrite">MR</ULink>
+    <UHorizontalNavigation :links="links" class="w-auto font-roboto-mono" />
+  </div>
+</template>
 
+<script setup lang="ts">
 const links = [
   {
     label: "About",
@@ -19,12 +26,3 @@ const links = [
   },
 ];
 </script>
-
-<template>
-  <div
-    class="mt-5 px-8 border-b border-gray-200 dark:border-gray-800 justify-between flex flex-row items-center"
-  >
-    <ULink to="/" class="font-playwrite">MR</ULink>
-    <UHorizontalNavigation :links="links" class="w-auto font-roboto-mono" />
-  </div>
-</template>

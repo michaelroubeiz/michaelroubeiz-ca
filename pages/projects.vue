@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import PageTitle from "../components/PageTitle.vue";
 
 export default {

@@ -31,7 +31,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import SkillTag from "./SkillTag.vue";
 
 export default {

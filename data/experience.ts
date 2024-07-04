@@ -1,4 +1,4 @@
-export const experience = [
+export const experienceData = [
     {
         id: 1,
         title: 'Full-Stack Developer Intern',
