@@ -12,7 +12,7 @@ export const experience = [
             'Mastered Git through extensive collaborative work usage',
             'Managed releases on Microsoft App Center with Azure DevOps support',
             'Assisted in onboarding new employees by detailing environment setup and essential processes'],
-        technologies: [],
+        technologies: ['Rat'], //TODO: add technologies
         color: 'red',
     },
     {
@@ -28,7 +28,7 @@ export const experience = [
             'Implemented Google Tag Manager to enable efficient analytic tracking of services',
             'Took on the role of Scrum master, successfully managing backlog review and cleanup'
         ],
-        technologies: [],
+        technologies: ['AngularJS', 'Jenkins'],
         color: 'green',
     },
     {
@@ -44,7 +44,7 @@ export const experience = [
             'Acquired expertise in Unix terminal operations',
             'Achieved Champion Learner Gold recognition by completing 200 hours of learning and certifications'
         ],
-        technologies: [],
+        technologies: ['Swift', 'Unix'],
         color: 'blue'
     }
 ]
