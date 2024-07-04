@@ -1,15 +1,13 @@
 <template>
-  <div class="text-6xl font-cairo" v-text="title"></div>
+  <div class="text-6xl font-cairo">
+    <slot></slot>
+  </div>
 </template>
 
 <script lang="ts">
-export default {
+import { defineComponent } from "vue";
+
+export default defineComponent({
   name: "PageTitle",
-  props: {
-    title: {
-      type: String,
-      required: true,
-    },
-  },
-};
+});
 </script>

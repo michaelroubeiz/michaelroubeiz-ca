@@ -24,12 +24,14 @@
       </div>
 
       <div class="flex flex-wrap gap-2">
-        <SkillTag
-          :skill="skill"
-          :color="experience.color"
-          :key="skill"
-          v-for="(skill, index) in experience.technologies"
-        />
+        <slot name="skills">
+          <SkillTag
+            :skill="skill"
+            :color="experience.color"
+            :key="skill"
+            v-for="skill in experience.technologies"
+          />
+        </slot>
       </div>
     </div>
   </div>
@@ -37,8 +39,9 @@
 
 <script lang="ts">
 import SkillTag from "./SkillTag.vue";
+import { defineComponent } from "vue";
 
-export default {
+export default defineComponent({
   name: "ExperienceItem",
   components: { SkillTag },
   props: {
@@ -47,5 +50,5 @@ export default {
       required: true,
     },
   },
-};
+});
 </script>

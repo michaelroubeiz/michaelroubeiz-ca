@@ -1,7 +1,13 @@
 <template>
   <div>
-    <PageTitle :title="title" />
-    <ExperienceList :experienceData="experienceData" />
+    <PageTitle>{{ title }}</PageTitle>
+    <ExperienceList :experienceData="experienceData">
+      <template #default="{ sortedExperience }">
+        <div v-for="item in sortedExperience" :key="item.id">
+          <ExperienceItem :experience="item" />
+        </div>
+      </template>
+    </ExperienceList>
   </div>
 </template>
 

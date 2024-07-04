@@ -1,6 +1,6 @@
 <template>
   <div class="welcome-section">
-    <PageTitle :title="title" />
+    <PageTitle>{{ title }}</PageTitle>
     <p class="welcome-message mt-6 text-2xl font-roboto-mono">
       Software Engineering graduate from Concordia University.
     </p>
@@ -23,7 +23,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<!-- <style scoped>
 @media screen and (max-width: 768px) {
   .welcome-section {
     margin: 0px 100px 100px 50px;
@@ -32,4 +32,4 @@ export default {
     font-size: large;
   }
 }
-</style>
+</style> -->

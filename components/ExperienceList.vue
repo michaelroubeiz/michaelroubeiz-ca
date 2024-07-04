@@ -1,17 +1,16 @@
 <template>
-  <ExperienceItem
-    v-for="item in sortedExperience"
-    :key="item.id"
-    :experience="item"
-  />
+  <div>
+    <slot :sortedExperience="sortedExperience"></slot>
+  </div>
 </template>
 
 <script lang="ts">
 import ExperienceItem from "../components/ExperienceItem.vue";
 import type { Experience } from "../types/Experience";
+import { defineComponent } from "vue";
 
-export default {
-  name: "Experience",
+export default defineComponent({
+  name: "ExperienceList",
   components: { ExperienceItem },
   props: {
     experienceData: {
@@ -27,5 +26,5 @@ export default {
       );
     },
   },
-};
+});
 </script>
