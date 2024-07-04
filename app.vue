@@ -1,7 +1,7 @@
 <template>
   <NuxtLayout>
     <NavBar />
-    <NuxtPage class="max-w-3xl m-auto mt-16" />
+    <NuxtPage class="max-w-3xl m-auto mt-16 pb-16" />
   </NuxtLayout>
 </template>
 
