@@ -1,10 +1,10 @@
 <template>
   <div>
     <PageTitle>{{ title }}</PageTitle>
-    <ExperienceList :experienceData="experienceData">
+    <ExperienceList :experienceList="experienceData">
       <template #default="{ sortedExperience }">
         <div v-for="item in sortedExperience" :key="item.id">
-          <ExperienceItem :experience="item" />
+          <ExperienceItem :experienceItem="item" />
         </div>
       </template>
     </ExperienceList>
@@ -13,12 +13,13 @@
 
 <script lang="ts">
 import { experienceData } from "../data/experience";
-import ExperienceList from "../components/ExperienceList.vue";
+import ExperienceList from "../components/Experience/ExperienceList.vue";
 import PageTitle from "../components/PageTitle.vue";
+import ExperienceItem from "~/components/Experience/ExperienceItem.vue";
 
 export default {
   name: "Experience",
-  components: { PageTitle, ExperienceList },
+  components: { PageTitle, ExperienceList, ExperienceItem },
   data() {
     return {
       title: "Experience",

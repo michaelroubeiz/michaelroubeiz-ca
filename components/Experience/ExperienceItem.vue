@@ -1,25 +1,25 @@
 <template>
   <div name="experience-box" class="my-6 font-roboto-mono">
     <div name="experience-title-company-date" class="text-lg">
-      {{ experience.title }}
+      {{ experienceItem.title }}
       <span class="font-sans mr-2">@</span>
-      <span :class="[`text-${experience.color}-400`]">{{
-        experience.company
+      <span :class="[`text-${experienceItem.color}-400`]">{{
+        experienceItem.company
       }}</span>
       <div name="experience-date" class="text-sm">
-        {{ experience.startDate }} - {{ experience.endDate }}
+        {{ experienceItem.startDate }} - {{ experienceItem.endDate }}
       </div>
     </div>
 
     <div class="ml-4">
       <div class="py-2">
         <div
-          v-for="experience in experience.description"
-          :key="experience"
+          v-for="description in experienceItem.description"
+          :key="description"
           class="flex gap-2"
         >
           <div>-</div>
-          <div>{{ experience }}</div>
+          <div>{{ description }}</div>
         </div>
       </div>
 
@@ -27,9 +27,9 @@
         <slot name="skills">
           <SkillTag
             :skill="skill"
-            :color="experience.color"
+            :color="experienceItem.color"
             :key="skill"
-            v-for="skill in experience.technologies"
+            v-for="skill in experienceItem.technologies"
           />
         </slot>
       </div>
@@ -38,14 +38,14 @@
 </template>
 
 <script lang="ts">
-import SkillTag from "./SkillTag.vue";
+import SkillTag from "~/components/SkillTag.vue";
 import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "ExperienceItem",
   components: { SkillTag },
   props: {
-    experience: {
+    experienceItem: {
       type: Object,
       required: true,
     },

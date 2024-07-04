@@ -47,4 +47,4 @@ export const experienceData = [
         technologies: ['Swift banking', 'Unix'],
         color: 'blue'
     }
-]
+];
