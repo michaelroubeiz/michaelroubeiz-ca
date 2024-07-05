@@ -3,7 +3,7 @@
     <PageTitle :title="title" />
     <ProjectList :projectList="projectData">
       <template #default="{ projectList }">
-        <div v-for="item in projectList" :key="item.id">
+        <div v-for="item in projectList" :key="item.id" class="text-white">
           <ProjectItem :projectItem="item" />
         </div>
       </template>

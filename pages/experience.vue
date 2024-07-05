@@ -3,7 +3,7 @@
     <PageTitle :title="title" />
     <ExperienceList :experienceList="experienceData">
       <template #default="{ sortedExperience }">
-        <div v-for="item in sortedExperience" :key="item.id">
+        <div v-for="item in sortedExperience" :key="item.id" class="text-white">
           <ExperienceItem :experienceItem="item" />
         </div>
       </template>
