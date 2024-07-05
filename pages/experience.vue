@@ -1,6 +1,6 @@
 <template>
   <div>
-    <PageTitle>{{ title }}</PageTitle>
+    <PageTitle :title="title" />
     <ExperienceList :experienceList="experienceData">
       <template #default="{ sortedExperience }">
         <div v-for="item in sortedExperience" :key="item.id">

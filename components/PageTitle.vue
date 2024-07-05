@@ -1,13 +1,59 @@
 <template>
   <div class="text-6xl font-cairo">
-    <slot></slot>
+    <span
+      v-for="(letter, index) in title"
+      :key="index"
+      :style="getStyle(index)"
+      class="fade-in hidden-letter"
+    >
+      {{ letter }}</span
+    >
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, computed } from "vue";
 
 export default defineComponent({
   name: "PageTitle",
+  props: {
+    title: {
+      type: String,
+      required: true,
+    },
+  },
+  setup(props) {
+    const title = computed(() => props.title.split(""));
+    const getStyle = (index: number) => {
+      return {
+        animationDelay: `${index * 0.1}s`,
+      };
+    };
+    return { title, getStyle };
+  },
 });
 </script>
+
+<style>
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  1% {
+    visibility: visible;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.hidden-letter {
+  visibility: hidden;
+}
+</style>

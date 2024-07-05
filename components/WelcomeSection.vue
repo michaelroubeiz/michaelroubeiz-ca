@@ -1,6 +1,6 @@
 <template>
   <div class="welcome-section">
-    <PageTitle>{{ title }}</PageTitle>
+    <PageTitle :title="title" />
     <p class="welcome-message mt-6 text-2xl font-roboto-mono">
       Software Engineering graduate from Concordia University.
     </p>

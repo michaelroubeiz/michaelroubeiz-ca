@@ -1,6 +1,6 @@
 <template>
   <div>
-    <PageTitle>{{ title }}</PageTitle>
+    <PageTitle :title="title" />
     <ProjectList :projectList="projectData">
       <template #default="{ projectList }">
         <div v-for="item in projectList" :key="item.id">
