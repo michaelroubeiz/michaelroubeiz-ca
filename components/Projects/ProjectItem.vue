@@ -4,13 +4,14 @@
   >
     <div class="grid grid-flow-col mb-2">
       <div class="hover:text-blue-700 max-w-min">
-        <ULink :to="projectItem.projectLink">
+        <ULink :to="projectItem.projectLink" target="_blank">
           {{ projectItem.title }}
         </ULink>
       </div>
       <ULink
         class="ml-auto hover:text-blue-700 rounded-full"
         :to="projectItem.githubLink"
+        target="_blank"
       >
         <UIcon name="mdi:github" width="24" height="24" dynamic />
       </ULink>
