@@ -1,13 +1,14 @@
 <template>
-  <ULink :to="socialLinks.email" target="_blank">
-    <UIcon name="mdi:email-outline" width="24" height="24" dynamic />
-  </ULink>
-  <ULink :to="socialLinks.linkedIn" target="_blank">
-    <UIcon name="mdi:linkedin" width="24" height="24" dynamic />
-  </ULink>
-  <ULink :to="socialLinks.github" target="_blank">
-    <UIcon name="mdi:github" width="24" height="24" dynamic />
-  </ULink>
+  <div class="grid grid-rows-3 gap-1 max-w-min">
+    <ULink
+      v-for="(social, key) in socialLinks"
+      :key="key"
+      :to="social.link"
+      target="_blank"
+    >
+      <UIcon :name="social.icon" width="24" height="24" dynamic />
+    </ULink>
+  </div>
 </template>
 
 <script lang="ts">
