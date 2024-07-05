@@ -1,19 +1,15 @@
 <template>
   <div
-    class="mt-5 md:px-8 px-4 border-b border-gray-800 justify-between flex flex-row items-center text-white"
+    class="flex flex-wrap gap-8 justify-center p-6 pt-8 font-roboto-mono text-gray-300 "
   >
-    <ULink to="/" class="font-playwrite">MR</ULink>
-    <UHorizontalNavigation
-      :links="links"
-      class="w-auto md:scale-100 scale-90 md:translate-x-0 translate-x-4 hover:bg-black-300"
+    <ULink
+      :to="link.to"
+      v-for="link in links"
+      active-class="active-link rounded-full bg-gray-200/10 text-white"
+      class="flex px-4 py-2 transition-all duration-300 ease-in-out"
     >
-      <template #default="{ link }">
-        <span
-          class="font-roboto-mono text-white after:border-gray-300 hover:text-white dark:text-white after:bg-red-500 dark:after:bg-red-400"
-          v-text="link.label"
-        ></span>
-      </template>
-    </UHorizontalNavigation>
+      {{ link.label }}
+    </ULink>
   </div>
 </template>
 
@@ -36,3 +32,32 @@ const links = [
   },
 ];
 </script>
+
+<style>
+.active-link {
+  position: relative;
+}
+
+.active-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  z-index: -1;
+  border-radius: inherit;
+  transition: transform 0.3s ease-in-out;
+  animation: shimmy 0.3s ease-in-out forwards;
+}
+
+@keyframes shimmy {
+  0% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+</style>
