@@ -2,7 +2,7 @@
   <NuxtLayout>
     <SpeedInsights />
     <NavBar />
-    <NuxtPage class="max-w-3xl md:m-auto md:mt-16 lg:pb-16 m-6" />
+    <NuxtPage class="max-w-3xl md:m-auto md:mt-16 lg:pb-16 m-6 text-white" />
   </NuxtLayout>
 </template>
 
