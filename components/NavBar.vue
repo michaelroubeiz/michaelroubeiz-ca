@@ -1,9 +1,9 @@
 <template>
   <div
-    class="mt-5 px-8 border-b border-gray-200 dark:border-gray-800 justify-between flex flex-row items-center"
+    class="mt-5 md:px-8 px-4 border-b border-gray-200 dark:border-gray-800 justify-between flex flex-row items-center"
   >
     <ULink to="/" class="font-playwrite">MR</ULink>
-    <UHorizontalNavigation :links="links" class="w-auto font-roboto-mono" />
+    <UHorizontalNavigation :links="links" class="w-auto font-roboto-mono md:scale-100 scale-90 md:translate-x-0 translate-x-4" />
   </div>
 </template>
 
