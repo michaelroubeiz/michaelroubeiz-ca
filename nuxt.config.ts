@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   modules: ["@nuxt/ui", "@nuxtjs/tailwindcss", "@nuxtjs/google-fonts"],
   googleFonts: {
     families: {
-      "Cairo Play": true,
+      "Cairo": true,
       "Playwrite MX": true,
       "Roboto Mono": true
     },

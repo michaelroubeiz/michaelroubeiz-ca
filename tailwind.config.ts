@@ -4,7 +4,7 @@ export default <Partial<Config>>{
     theme: {
         extend: {
             fontFamily: {
-                'cairo': ['Cairo Play', 'sans-serif'],
+                'cairo': ['Cairo', 'sans-serif'],
                 'playwrite': ['Playwrite MX', 'cursive'],
                 'roboto-mono': ['Roboto Mono', 'monospace'],
             },
