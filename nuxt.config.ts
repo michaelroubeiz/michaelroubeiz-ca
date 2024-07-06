@@ -5,6 +5,7 @@ export default defineNuxtConfig({
   googleFonts: {
     families: {
       "Cairo": true,
+      "Open Sans": true,
       "Playwrite MX": true,
       "Roboto Mono": true
     },

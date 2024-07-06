@@ -3,15 +3,25 @@
     class="bg-[#112240] rounded-sm p-6 hover:-translate-y-1 transition ease-out delay-150 h-full"
   >
     <div class="grid grid-flow-col mb-2">
-      <div class="hover:text-blue-700 max-w-min whitespace-nowrap">
-        <ULink :to="projectItem.projectLink" target="_blank">
+      <div class="max-w-min whitespace-nowrap font-roboto-mono">
+        <template v-if="projectItem.projectLinkActive">
+          <ULink
+            :to="projectItem.projectLink"
+            target="_blank"
+            class="hover:text-blue-700"
+          >
+            {{ projectItem.title }}
+          </ULink>
+        </template>
+        <template v-else>
           {{ projectItem.title }}
-        </ULink>
+        </template>
       </div>
       <ULink
         class="ml-auto hover:text-blue-700 rounded-full"
         :to="projectItem.githubLink"
         target="_blank"
+        v-if="projectItem.publicGithubLink"
       >
         <UIcon name="mdi:github" width="24" height="24" dynamic />
       </ULink>

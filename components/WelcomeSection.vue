@@ -1,7 +1,7 @@
 <template>
   <div class="welcome-section">
     <PageTitle :title="title" />
-    <p class="welcome-message mt-6 text-2xl font-roboto-mono text-white">
+    <p class="welcome-message mt-6 text-2xl font-open-sans text-white">
       Software Engineering graduate from Concordia University.
     </p>
     <SocialIcons />

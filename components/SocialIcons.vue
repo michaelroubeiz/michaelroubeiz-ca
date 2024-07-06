@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-rows-3 gap-1 max-w-min">
+  <div class="grid grid-cols-3 gap-8 max-w-min">
     <ULink
       v-for="(social, key) in socialLinks"
       :key="key"

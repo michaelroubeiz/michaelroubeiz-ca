@@ -6,5 +6,7 @@ export interface Project {
     description: string
     technologies: string[]
     projectLink: string
+    projectLinkActive: boolean
     githubLink: string
+    publicGithubLink: boolean
 }

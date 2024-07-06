@@ -1,7 +1,7 @@
 <template>
-  <div class="my-6 font-roboto-mono">
+  <div class="my-6 font-open-sans">
     <div v-for="year in sortedYears" :key="year">
-      <h2 class="text-lg font-bold mb-2">{{ year }}</h2>
+      <h2 class="text-lg font-bold mb-2 font-roboto-mono">{{ year }}</h2>
       <div class="grid md:grid-cols-2 grid-cols-1 gap-6 mb-4">
         <slot :projectList="groupedProjects[year]"></slot>
       </div>

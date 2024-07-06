@@ -1,5 +1,5 @@
 <template>
-  <div name="experience-box" class="my-6 font-roboto-mono">
+  <div name="experience-box" class="my-6 font-open-sans">
     <div name="experience-title-company-date" class="text-lg">
       {{ experienceItem.title }}
       <span class="font-sans mr-2">@</span>

@@ -5,6 +5,7 @@ export default <Partial<Config>>{
         extend: {
             fontFamily: {
                 'cairo': ['Cairo', 'sans-serif'],
+                'open-sans': ['Open Sans', 'sans-serif'],
                 'playwrite': ['Playwrite MX', 'cursive'],
                 'roboto-mono': ['Roboto Mono', 'monospace'],
             },

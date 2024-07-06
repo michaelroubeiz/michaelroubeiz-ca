@@ -1,7 +1,7 @@
 <template>
   <div class="fixed top-0 pt-8 flex flex-wrap w-full justify-center z-50">
     <div
-      class="fixed top-0 my-8 px-3 flex flex-wrap gap-4 font-roboto-mono text-gray-300 bg-gray-700/80 rounded-full backdrop-blur-sm"
+      class="fixed top-0 my-8 px-3 flex flex-wrap gap-4 font-open-sans text-gray-300 bg-gray-700/80 rounded-full backdrop-blur-sm"
     >
       <ULink
         :to="link.to"
