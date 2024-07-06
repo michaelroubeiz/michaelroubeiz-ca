@@ -29,6 +29,10 @@ const links = [
     label: "Projects",
     to: "/projects",
   },
+  {
+    label: "Contact",
+    to: "/contact",
+  },
 ];
 </script>
 
