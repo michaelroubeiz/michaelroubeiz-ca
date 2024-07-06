@@ -1,15 +1,17 @@
 <template>
-  <div
-    class="flex flex-wrap gap-8 justify-center p-6 pt-8 font-roboto-mono text-gray-300 "
-  >
-    <ULink
-      :to="link.to"
-      v-for="link in links"
-      active-class="active-link rounded-full bg-gray-200/10 text-white"
-      class="flex px-4 py-2 transition-all duration-300 ease-in-out"
+  <div class="fixed top-0 pt-8 flex flex-wrap w-full justify-center z-50">
+    <div
+      class="fixed top-0 my-8 px-3 flex flex-wrap gap-4 font-roboto-mono text-gray-300 bg-gray-700/80 rounded-full backdrop-blur-sm"
     >
-      {{ link.label }}
-    </ULink>
+      <ULink
+        :to="link.to"
+        v-for="link in links"
+        active-class="active-link rounded-full bg-gray-200/10 text-white"
+        class="flex px-4 py-1.5 my-3 transition-all duration-300 ease-in-out"
+      >
+        {{ link.label }}
+      </ULink>
+    </div>
   </div>
 </template>
 
@@ -17,17 +19,14 @@
 const links = [
   {
     label: "About",
-    icon: "i-heroicons-home",
     to: "/",
   },
   {
     label: "Experience",
-    icon: "i-heroicons-chart-bar",
     to: "/experience",
   },
   {
     label: "Projects",
-    icon: "i-heroicons-command-line",
     to: "/projects",
   },
 ];

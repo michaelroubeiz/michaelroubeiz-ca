@@ -3,7 +3,7 @@
     class="bg-[#112240] rounded-sm p-6 hover:-translate-y-1 transition ease-out delay-150"
   >
     <div class="grid grid-flow-col mb-2">
-      <div class="hover:text-blue-700 max-w-min">
+      <div class="hover:text-blue-700 max-w-min whitespace-nowrap">
         <ULink :to="projectItem.projectLink" target="_blank">
           {{ projectItem.title }}
         </ULink>
