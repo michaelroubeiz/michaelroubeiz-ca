@@ -40,6 +40,3 @@ export default defineComponent({
   },
 });
 </script>
-<!-- <ULink :to="socialLinks.github">
-    <UIcon name="mdi:github" width="24" height="24" dynamic />
-  </ULink> -->

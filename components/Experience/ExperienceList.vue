@@ -7,14 +7,14 @@
 <script lang="ts">
 import ExperienceItem from "./ExperienceItem.vue";
 import type { Experience } from "../../types/Experience";
-import { defineComponent } from "vue";
+import { defineComponent, type PropType } from "vue";
 
 export default defineComponent({
   name: "ExperienceList",
   components: { ExperienceItem },
   props: {
     experienceList: {
-      type: Array as () => Experience[],
+      type: Array as PropType<Experience[]>,
       required: true,
     },
   },

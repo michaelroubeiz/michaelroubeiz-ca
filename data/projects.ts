@@ -4,7 +4,7 @@ export const projectData = [
         title: 'michaelroubeiz.ca',
         year: 2024,
         image: '',
-        description: 'michaelroubeiz.ca is my portfolia website that I developed to display my projects and skills.',
+        description: 'michaelroubeiz.ca is my portfolia website that I developed to display my experience, projects, and skills.',
         technologies: ['Vue.js', 'Nuxt.js', 'NuxtUI', 'TailwindCSS', 'Vercel'],
         projectLink: 'https://michaelroubeiz.ca',
         githubLink: ''
@@ -34,7 +34,7 @@ export const projectData = [
         title: 'Moon Compiler',
         year: 2024,
         image: '',
-        description: 'Designed and implemented a compiler, converting high-level language into machine code',
+        description: 'Designed and implemented a compiler, converting high-level language into machine code.',
         technologies: ['Python'],
         projectLink: '',
         githubLink: '',
