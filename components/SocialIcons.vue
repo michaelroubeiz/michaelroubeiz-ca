@@ -5,6 +5,7 @@
       :key="key"
       :to="social.link"
       target="_blank"
+      :aria-label="key"
     >
       <UTooltip :text="key" :key="key">
         <UIcon :name="social.icon" width="24" height="24" dynamic />

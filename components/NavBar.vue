@@ -8,6 +8,7 @@
         v-for="link in links"
         active-class="active-link rounded-full bg-gray-200/10 text-white"
         class="flex px-4 py-1.5 my-3 transition-all duration-300 ease-in-out"
+        :aria-label="link.label"
       >
         {{ link.label }}
       </ULink>

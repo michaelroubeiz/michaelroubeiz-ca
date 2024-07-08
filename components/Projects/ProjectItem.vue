@@ -9,6 +9,7 @@
             :to="projectItem.projectLink"
             target="_blank"
             class="hover:text-blue-700"
+            :aria-label="projectItem.title"
           >
             {{ projectItem.title }}
           </ULink>
@@ -22,6 +23,7 @@
         :to="projectItem.githubLink"
         target="_blank"
         v-if="projectItem.publicGithubLink"
+        :aria-label="projectItem.githubLink"
       >
         <UTooltip text="github" :popper="{ placement: 'right' }">
           <UIcon name="mdi:github" width="24" height="24" dynamic />

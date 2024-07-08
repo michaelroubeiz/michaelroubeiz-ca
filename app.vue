@@ -15,9 +15,3 @@ export default {
   components: { SpeedInsights },
 };
 </script>
-
-<style>
-body {
-  background-color: #0b192f;
-}
-</style>
