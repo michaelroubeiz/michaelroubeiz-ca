@@ -1,12 +1,12 @@
 <template>
-  <div name="experience-box" class="my-6 font-open-sans">
-    <div name="experience-title-company-date" class="text-lg">
+  <div class="my-6 font-open-sans">
+    <div class="text-lg">
       {{ experienceItem.title }}
       <span class="font-sans mr-2">@</span>
       <span :class="[`text-${experienceItem.color}-400`]">{{
         experienceItem.company
       }}</span>
-      <div name="experience-date" class="text-sm">
+      <div class="text-sm">
         {{ experienceItem.startDate }} - {{ experienceItem.endDate }}
       </div>
     </div>

@@ -9,9 +9,6 @@ export default <Partial<Config>>{
                 'playwrite': ['Playwrite MX', 'cursive'],
                 'roboto-mono': ['Roboto Mono', 'monospace'],
             },
-            colors: {
-                primary: '#dc2626'
-            },
         },
     }
 }

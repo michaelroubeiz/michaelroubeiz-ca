@@ -1,0 +1,1 @@
+export const developerTitles = ['software', 'frontend', 'backend', 'fullstack', 'devops'];
