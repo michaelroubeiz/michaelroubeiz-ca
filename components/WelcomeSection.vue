@@ -9,7 +9,6 @@
       <p class="mb-2">I am currently based in Montréal, QC, Canada.</p>
     </div>
     <SocialIcons />
-    <!-- TODO: Move this component and style it -->
   </div>
 </template>
 
