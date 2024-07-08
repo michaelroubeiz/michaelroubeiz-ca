@@ -23,7 +23,9 @@
         target="_blank"
         v-if="projectItem.publicGithubLink"
       >
-        <UIcon name="mdi:github" width="24" height="24" dynamic />
+        <UTooltip text="github" :popper="{ placement: 'right' }">
+          <UIcon name="mdi:github" width="24" height="24" dynamic />
+        </UTooltip>
       </ULink>
     </div>
     <div class="text-xs text-gray-300 mb-6">{{ projectItem.description }}</div>

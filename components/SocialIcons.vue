@@ -6,7 +6,9 @@
       :to="social.link"
       target="_blank"
     >
-      <UIcon :name="social.icon" width="24" height="24" dynamic />
+      <UTooltip :text="key" :key="key">
+        <UIcon :name="social.icon" width="24" height="24" dynamic />
+      </UTooltip>
     </ULink>
   </div>
 </template>
