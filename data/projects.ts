@@ -9,7 +9,7 @@ export const projectData = [
         projectLink: 'https://michaelroubeiz.ca',
         projectLinkActive: true,
         githubLink: 'https://github.com/mikeflof/michaelroubeiz.io',
-        publicGithubLink: false,
+        publicGithubLink: true,
     },
     {
         id: 2,
