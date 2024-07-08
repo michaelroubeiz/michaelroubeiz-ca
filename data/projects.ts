@@ -8,7 +8,7 @@ export const projectData = [
         technologies: ['Vue.js', 'Nuxt.js', 'NuxtUI', 'Typesript', 'TailwindCSS', 'Vercel'],
         projectLink: 'https://michaelroubeiz.ca',
         projectLinkActive: true,
-        githubLink: 'https://github.com/mikeflof/michaelroubeiz.io',
+        githubLink: 'https://github.com/mikeflof/michaelroubeiz-ca',
         publicGithubLink: true,
     },
     {

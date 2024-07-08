@@ -2,14 +2,16 @@
 
 Portfolio website to display my experience, projects, and skills.
 
-[![michaelroubeiz.io CI](https://github.com/mikeflof/michaelroubeiz.io/actions/workflows/michaelroubeiz.io-ci.yml/badge.svg)](https://github.com/mikeflof/michaelroubeiz.io/actions/workflows/michaelroubeiz.io-ci.yml)
+[![michaelroubeiz-ca CI](https://github.com/mikeflof/michaelroubeiz-ca/actions/workflows/michaelroubeiz-ca-ci.yml/badge.svg)](https://github.com/mikeflof/michaelroubeiz-ca/actions/workflows/michaelroubeiz-ca-ci.yml)
 
 ### Setup & Running
+
 ```
 npm install
 ```
+
 ```
 npm run dev
 ```
-Visit [http://localhost:3000](http://localhost:3000)
 
+Visit [http://localhost:3000](http://localhost:3000)
