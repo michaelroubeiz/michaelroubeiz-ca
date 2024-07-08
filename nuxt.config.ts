@@ -5,6 +5,10 @@ export default defineNuxtConfig({
       charset: "utf-8",
       viewport: "width=device-width, initial-scale=1",
       title: "michaelroubeiz.ca",
+      meta: [
+        { name: "author", content: "Michael Roubeiz" },
+        { name: "description", content: "Portfolio website for software developer Michael Roubeiz." },
+        { name: "keywords", content: "Michael Roubeiz, Portfolio, Software Developer, Frontend Developer, Backend Developer, Fullstack Developer, Web Developer, Developer, Software Engineer, Software Development, Software Engineering, Software, Development, Engineering, Concordia University, Montreal, Quebec, Canada, Computer Science, IBM developer, Air Canada developer, Flexspring developer" }],
       htmlAttrs: {
         lang: "en",
       },
