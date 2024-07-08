@@ -15,25 +15,17 @@
   </div>
 </template>
 
-<script setup lang="ts">
-const links = [
-  {
-    label: "About",
-    to: "/",
+<script lang="ts">
+import { navbarLinks } from "../data/navbarLinks";
+
+export default {
+  name: "NavBar",
+  data() {
+    return {
+      links: navbarLinks,
+    };
   },
-  {
-    label: "Experience",
-    to: "/experience",
-  },
-  {
-    label: "Projects",
-    to: "/projects",
-  },
-  // {
-  //   label: "Contact",
-  //   to: "/contact",
-  // },
-];
+};
 </script>
 
 <style>

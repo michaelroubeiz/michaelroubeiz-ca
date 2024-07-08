@@ -2,7 +2,7 @@
   <div
     class="text-4xl mt-2 max-w-min flex flex-nowrap font-cairo transition duration-500 ease-in-out"
   >
-    <span class="border-b-2">{{ currentTitle }}</span>
+    <span class="border-b-2 opacity-75">{{ currentTitle }}</span>
     <span class="ml-2">developer</span>
   </div>
 </template>

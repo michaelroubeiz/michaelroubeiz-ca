@@ -3,8 +3,10 @@
     <PageTitle :title="title" />
     <DeveloperTitles :titles="developerTitles" />
     <div class="mt-6 text-2xl font-open-sans text-white">
-      Software Engineering graduate from Concordia University.<br />
-      I am currently based in Montréal, QC, Canada.
+      <p class="mb-2">
+        Software Engineering graduate from Concordia University.
+      </p>
+      <p class="mb-2">I am currently based in Montréal, QC, Canada.</p>
     </div>
     <SocialIcons />
     <!-- TODO: Move this component and style it -->
