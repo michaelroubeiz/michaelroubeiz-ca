@@ -2,7 +2,7 @@
   <div class="my-6 font-open-sans">
     <div class="text-lg">
       {{ experienceItem.title }}
-      <span class="font-sans mr-2">@</span>
+      <span class="font-sans mr-1">@</span>
       <span :class="[`text-${experienceItem.color}-400`]">{{
         experienceItem.company
       }}</span>
