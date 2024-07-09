@@ -1,14 +1,14 @@
 <template>
   <div class="fixed top-0 pt-8 flex flex-wrap w-full justify-center z-50">
     <div
-      class="fixed top-0 my-8 px-3 flex flex-wrap gap-4 font-open-sans text-gray-300 rounded-full backdrop-blur-sm"
+      class="fixed top-0 my-8 px-3 flex flex-wrap gap-4 font-open-sans text-gray-300 rounded-lg backdrop-blur-sm"
     >
       <ULink
         :to="link.to"
         v-for="link in links"
-        active-class="active-link rounded-full bg-gray-200/10 text-white"
+        active-class="active-link rounded-lg bg-gray-200/10 text-white"
         class="flex px-4 py-1.5 my-3 transition-all duration-300 ease-in-out"
-        inactive-class="hover:bg-gray-300/10 rounded-full"
+        inactive-class="hover:bg-gray-300/10 rounded-lg"
         :aria-label="link.label"
       >
         {{ link.label }}
