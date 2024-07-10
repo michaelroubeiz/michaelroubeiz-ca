@@ -13,7 +13,7 @@ export default defineNuxtConfig({
         lang: "en",
       },
       bodyAttrs: {
-        style: "background-color: #0b192f;",
+        style: "background: linear-gradient(321deg, rgba(8,18,51,1) 0%, rgba(4,2,37,1) 30%, rgba(6,16,28,1) 100%);",
       }
     },
   },

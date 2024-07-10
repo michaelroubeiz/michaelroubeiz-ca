@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-[#112240] rounded-sm p-6 hover:-translate-y-1 transition ease-out delay-150 h-full"
+    class="bg-[#040821] border-blue-900/50 hover:border-blue-900 border-2 rounded-lg p-6 hover:-translate-y-1 transition ease-out delay-150 h-full"
   >
     <div class="grid grid-flow-col mb-2">
       <div class="max-w-min whitespace-nowrap font-roboto-mono">
@@ -8,7 +8,7 @@
           <ULink
             :to="projectItem.projectLink"
             target="_blank"
-            class="hover:text-blue-700"
+            class="hover:text-blue-700 hover:underline underline-offset-4"
             :aria-label="projectItem.title"
           >
             {{ projectItem.title }}
