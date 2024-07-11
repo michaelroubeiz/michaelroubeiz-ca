@@ -1,5 +1,5 @@
 <template>
-  <div class="text-6xl font-cairo">
+  <h1 class="text-6xl font-cairo" :aria-label="title">
     <span
       v-for="(letter, index) in titleLetters"
       :key="index"
@@ -8,7 +8,7 @@
     >
       {{ letter }}</span
     >
-  </div>
+  </h1>
 </template>
 
 <script lang="ts">

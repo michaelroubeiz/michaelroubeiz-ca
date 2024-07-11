@@ -12,15 +12,14 @@
     </div>
 
     <div class="ml-4">
-      <div class="py-2">
-        <div
+      <div class="my-2 space-y-2">
+        <ul
           v-for="description in experienceItem.description"
           :key="description"
-          class="flex gap-2"
+          class="flex list-disc"
         >
-          <div>-</div>
-          <div>{{ description }}</div>
-        </div>
+          <li>{{ description }}</li>
+        </ul>
       </div>
 
       <div class="flex flex-wrap gap-2">

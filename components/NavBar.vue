@@ -1,20 +1,21 @@
 <template>
   <div class="fixed top-0 pt-8 flex flex-wrap w-full justify-center z-50">
-    <div
+    <ul
       class="fixed top-0 my-8 px-3 flex flex-wrap gap-4 font-open-sans text-gray-300 rounded-lg backdrop-blur-sm"
+      aria-label="NavBar links"
     >
-      <ULink
-        v-for="link in links"
-        :key="link.label"
-        :to="link.to"
-        active-class="active-link rounded-lg bg-gray-200/10"
-        class="flex px-4 py-1.5 my-3 transition-all duration-300 ease-in-out"
-        inactive-class="hover:bg-gray-300/10 rounded-lg"
-        :aria-label="link.label"
-      >
-        {{ link.label }}
-      </ULink>
-    </div>
+      <li v-for="link in links" :key="link.label">
+        <ULink
+          :to="link.to"
+          active-class="active-link rounded-lg bg-gray-200/10"
+          class="flex px-4 py-2.5 my-3 transition-all duration-300 ease-in-out"
+          inactive-class="hover:bg-gray-300/10 rounded-lg"
+          :aria-label="link.label"
+        >
+          {{ link.label }}
+        </ULink>
+      </li>
+    </ul>
   </div>
 </template>
 

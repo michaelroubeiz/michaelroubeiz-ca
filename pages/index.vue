@@ -2,11 +2,9 @@
   <div class="min-h-screen">
     <PageTitle :title="title" />
     <DeveloperTitles :titles="developerTitles" />
-    <div class="mt-6 text-2xl font-open-sans">
-      <p class="mb-2">
-        Software Engineering graduate from Concordia University.
-      </p>
-      <p class="mb-2">I am currently based in Montréal, QC, Canada.</p>
+    <div class="mt-4 text-2xl font-open-sans leading-9 space-y-2">
+      <p>Software Engineering graduate from Concordia University.</p>
+      <p>I am currently based in Montréal, QC, Canada.</p>
     </div>
     <SocialIcons />
   </div>
