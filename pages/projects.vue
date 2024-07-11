@@ -3,7 +3,7 @@
     <PageTitle :title="title" />
     <ProjectList :projectList="projectData">
       <template #default="{ projectList }">
-        <div v-for="item in projectList" :key="item.id" class="text-white">
+        <div v-for="item in projectList" :key="item.id">
           <ProjectItem :projectItem="item" />
         </div>
       </template>
@@ -16,6 +16,7 @@ import PageTitle from "../components/PageTitle.vue";
 import ProjectList from "../components/Projects/ProjectList.vue";
 import ProjectItem from "../components/Projects/ProjectItem.vue";
 import { projectData } from "../data/projects";
+import type { Project } from "~/types/Project";
 
 export default {
   name: "Projects",
@@ -23,7 +24,7 @@ export default {
   data() {
     return {
       title: "Projects",
-      projectData,
+      projectData: projectData as Project[],
     };
   },
 };

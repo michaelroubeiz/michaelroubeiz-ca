@@ -2,7 +2,7 @@
   <div class="min-h-screen">
     <PageTitle :title="title" />
     <DeveloperTitles :titles="developerTitles" />
-    <div class="mt-6 text-2xl font-open-sans text-white">
+    <div class="mt-6 text-2xl font-open-sans">
       <p class="mb-2">
         Software Engineering graduate from Concordia University.
       </p>

@@ -43,12 +43,14 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, type PropType } from "vue";
+import type { Project } from "../../types/Project";
+
 export default defineComponent({
   name: "ProjectItem",
   props: {
     projectItem: {
-      type: Object,
+      type: Object as PropType<Project>,
       required: true,
     },
   },

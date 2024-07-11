@@ -6,7 +6,7 @@
       <ULink
         :to="link.to"
         v-for="link in links"
-        active-class="active-link rounded-lg bg-gray-200/10 text-white"
+        active-class="active-link rounded-lg bg-gray-200/10"
         class="flex px-4 py-1.5 my-3 transition-all duration-300 ease-in-out"
         inactive-class="hover:bg-gray-300/10 rounded-lg"
         :aria-label="link.label"
