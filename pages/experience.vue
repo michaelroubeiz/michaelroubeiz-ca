@@ -1,10 +1,10 @@
 <template>
   <div>
     <PageTitle :title="title" />
-    <ExperienceList :experienceList="experienceData">
+    <ExperienceList :experience-list="experienceData">
       <template #default="{ sortedExperience }">
         <div v-for="item in sortedExperience" :key="item.id">
-          <ExperienceItem :experienceItem="item" />
+          <ExperienceItem :experience-item="item" />
         </div>
       </template>
     </ExperienceList>

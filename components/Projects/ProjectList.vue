@@ -3,7 +3,7 @@
     <div v-for="year in sortedYears" :key="year">
       <div class="font-roboto-mono text-lg font-bold mb-2">{{ year }}</div>
       <div class="grid md:grid-cols-2 grid-cols-1 gap-6 mb-4">
-        <slot :projectList="groupedProjects[year]"></slot>
+        <slot :project-list="groupedProjects[year]" />
       </div>
     </div>
   </div>
@@ -11,12 +11,10 @@
 
 <script lang="ts">
 import { defineComponent, type PropType } from "vue";
-import ProjectItem from "./ProjectItem.vue";
 import type { Project } from "~/types/Project";
 
 export default defineComponent({
   name: "ProjectList",
-  components: { ProjectItem },
   props: {
     projectList: {
       type: Array as PropType<Project[]>,

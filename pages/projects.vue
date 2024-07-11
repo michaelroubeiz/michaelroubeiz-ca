@@ -1,10 +1,10 @@
 <template>
   <div>
     <PageTitle :title="title" />
-    <ProjectList :projectList="projectData">
+    <ProjectList :project-list="projectData">
       <template #default="{ projectList }">
         <div v-for="item in projectList" :key="item.id">
-          <ProjectItem :projectItem="item" />
+          <ProjectItem :project-item="item" />
         </div>
       </template>
     </ProjectList>

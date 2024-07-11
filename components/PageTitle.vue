@@ -1,7 +1,7 @@
 <template>
   <div class="text-6xl font-cairo">
     <span
-      v-for="(letter, index) in title"
+      v-for="(letter, index) in titleLetters"
       :key="index"
       :style="getStyle(index)"
       class="fade-in hidden-letter"
@@ -23,13 +23,13 @@ export default defineComponent({
     },
   },
   setup(props) {
-    const title = computed(() => props.title.split(""));
+    const titleLetters = computed(() => props.title.split(""));
     const getStyle = (index: number) => {
       return {
         animationDelay: `${index * 0.1}s`,
       };
     };
-    return { title, getStyle };
+    return { titleLetters, getStyle };
   },
 });
 </script>

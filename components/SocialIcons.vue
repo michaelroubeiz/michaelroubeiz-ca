@@ -7,7 +7,7 @@
       target="_blank"
       :aria-label="key"
     >
-      <UTooltip :text="key" :key="key">
+      <UTooltip :key="key" :text="key">
         <UIcon :name="social.icon" width="40" height="40" dynamic />
       </UTooltip>
     </ULink>

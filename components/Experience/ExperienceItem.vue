@@ -26,10 +26,10 @@
       <div class="flex flex-wrap gap-2">
         <slot name="skills">
           <SkillTag
+            v-for="skill in experienceItem.technologies"
+            :key="skill"
             :skill="skill"
             :color="experienceItem.color"
-            :key="skill"
-            v-for="skill in experienceItem.technologies"
           />
         </slot>
       </div>

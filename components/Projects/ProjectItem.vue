@@ -19,11 +19,11 @@
         </template>
       </div>
       <ULink
-        class="ml-auto hover:text-blue-700 rounded-full"
-        :to="projectItem.githubLink"
-        target="_blank"
         v-if="projectItem.publicGithubLink"
+        :to="projectItem.githubLink"
         :aria-label="projectItem.githubLink"
+        class="ml-auto hover:text-blue-700 rounded-full"
+        target="_blank"
       >
         <UTooltip text="github" :popper="{ placement: 'right' }">
           <UIcon name="mdi:github" width="24" height="24" dynamic />
@@ -37,7 +37,7 @@
         :key="item"
         class="text-xs text-gray-400"
         v-text="item"
-      ></div>
+      />
     </div>
   </div>
 </template>
