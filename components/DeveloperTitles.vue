@@ -33,11 +33,9 @@ export default defineComponent({
     const currentTitleIndex = ref(0);
     const timerId = ref<ReturnType<typeof setInterval> | null>(null);
 
-    const currentTitle = computed(() => {
-      return props.titles[currentTitleIndex.value];
-    });
+    const currentTitle = computed(() => props.titles[currentTitleIndex.value]);
 
-    const rotateTitles = () => {
+    const startRotation = () => {
       timerId.value = setInterval(() => {
         currentTitleIndex.value =
           (currentTitleIndex.value + 1) % props.titles.length;
@@ -52,12 +50,9 @@ export default defineComponent({
     };
 
     onMounted(() => {
-      rotateTitles();
+      setTimeout(startRotation, 1500);
     });
-
-    onBeforeUnmount(() => {
-      stopRotation();
-    });
+    onBeforeUnmount(stopRotation);
 
     return {
       currentTitle,
