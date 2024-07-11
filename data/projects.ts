@@ -20,7 +20,7 @@ export const projectData = [
         technologies: ['StripeAPI', 'Typesript', 'Next.js', 'React', 'Python', 'Docker', 'DigitalOcean', 'PostgreSQL', 'Cypress', 'Nginx', 'FastAPI'],
         projectLink: 'https://communitygrid.app',
         projectLinkActive: true,
-        githubLink: 'https://github.com/JR-prog/CommunityGrid',
+        githubLink: 'https://github.com/jay-roe/CommunityGrid',
         publicGithubLink: false,
     },
     {
@@ -32,7 +32,7 @@ export const projectData = [
         technologies: ['Typesript', 'Next.js', 'React', 'Firebase', 'Cypress', 'Jest', 'Vercel'],
         projectLink: 'http://www.interlinked.live',
         projectLinkActive: false,
-        githubLink: 'https://github.com/JR-prog/Interlinked',
+        githubLink: 'https://github.com/jay-roe/Interlinked',
         publicGithubLink: true,
     },
     {
@@ -68,7 +68,7 @@ export const projectData = [
         technologies: ['GithubAPI', 'SlackAPI', 'TwitterAPI', 'ChakraUI', 'Next.js', 'React', 'Typesript'],
         projectLink: 'https://www.crosscast.live',
         projectLinkActive: false,
-        githubLink: 'https://github.com/JR-prog/Cross-Cast',
+        githubLink: 'https://github.com/jay-roe/Cross-Cast',
         publicGithubLink: true,
     },
 ];
