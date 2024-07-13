@@ -8,7 +8,7 @@ export const projectData = [
         technologies: ['Vue.js', 'Nuxt.js', 'NuxtUI', 'Typesript', 'TailwindCSS', 'Vercel'],
         projectLink: 'https://michaelroubeiz.ca',
         projectLinkActive: true,
-        githubLink: 'https://github.com/mikeflof/michaelroubeiz-ca',
+        githubLink: 'https://github.com/michaelroubeiz/michaelroubeiz-ca',
         publicGithubLink: true,
     },
     {
@@ -44,7 +44,7 @@ export const projectData = [
         technologies: ['Python', 'Anytree'],
         projectLink: '',
         projectLinkActive: null,
-        githubLink: 'https://github.com/mikeflof/COMP442-project',
+        githubLink: 'https://github.com/michaelroubeiz/COMP442-project',
         publicGithubLink: false,
     },
     {

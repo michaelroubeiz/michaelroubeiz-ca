@@ -2,7 +2,7 @@
 
 Portfolio website to display my experience, projects, and skills.
 
-[![michaelroubeiz-ca CI](https://github.com/mikeflof/michaelroubeiz-ca/actions/workflows/michaelroubeiz-ca-ci.yml/badge.svg)](https://github.com/mikeflof/michaelroubeiz-ca/actions/workflows/michaelroubeiz-ca-ci.yml)
+[![michaelroubeiz-ca CI](https://github.com/michaelroubeiz/michaelroubeiz-ca/actions/workflows/michaelroubeiz-ca-ci.yml/badge.svg)](https://github.com/michaelroubeiz/michaelroubeiz-ca/actions/workflows/michaelroubeiz-ca-ci.yml)
 
 ### Setup & Running
 
