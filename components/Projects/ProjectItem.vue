@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-[#040821] border-blue-900/50 hover:border-blue-900 border-2 rounded-lg p-6 hover:-translate-y-1 transition ease-out delay-150 h-full"
+    class="border-blue-900/50 hover:border-blue-900 border-2 rounded-lg p-6 hover:-translate-y-1 transition ease-out delay-150 h-full"
   >
     <div class="grid grid-flow-col mb-2">
       <div class="max-w-min whitespace-nowrap font-roboto-mono">
