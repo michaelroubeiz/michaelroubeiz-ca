@@ -75,6 +75,9 @@ export default {
     },
     handleScroll() {
       this.scrollY = window.scrollY;
+      if (this.scrollY > 0) {
+        this.showList = false;
+      }
     },
   },
 };
