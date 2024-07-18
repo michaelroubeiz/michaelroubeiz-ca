@@ -1,7 +1,7 @@
 <template>
   <div class="fixed top-0 pt-8 flex flex-wrap w-full justify-center z-50">
     <ul
-      class="fixed top-0 my-8 px-3 flex-wrap gap-4 font-open-sans text-gray-300 rounded-lg backdrop-blur-sm md:flex hidden transition duration-300 ease-in-out"
+      class="fixed top-0 my-8 px-3 flex-wrap gap-4 font-open-sans text-gray-300 rounded-lg backdrop-blur-sm md:flex hidden transition duration-100 ease-in-out"
       :class="{ 'opacity-0': scrollY > 0 }"
       aria-label="NavBar links"
     >
@@ -18,7 +18,7 @@
       </li>
     </ul>
     <div
-      class="md:hidden flex justify-center items-center transition duration-300 ease-in-out"
+      class="md:hidden flex justify-center items-center transition duration-100 ease-in-out"
       :class="{ 'opacity-0': scrollY > 0 }"
     >
       <UIcon
