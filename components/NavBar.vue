@@ -1,7 +1,8 @@
 <template>
   <div class="fixed top-0 pt-8 flex flex-wrap w-full justify-center z-50">
     <ul
-      class="fixed top-0 my-8 px-3 flex-wrap gap-4 font-open-sans text-gray-300 rounded-lg backdrop-blur-sm md:flex hidden"
+      class="fixed top-0 my-8 px-3 flex-wrap gap-4 font-open-sans text-gray-300 rounded-lg backdrop-blur-sm md:flex hidden transition duration-300 ease-in-out"
+      :class="{ 'opacity-0': scrollY > 0 }"
       aria-label="NavBar links"
     >
       <li v-for="link in links" :key="link.label">
@@ -16,7 +17,10 @@
         </ULink>
       </li>
     </ul>
-    <div class="md:hidden flex justify-center items-center">
+    <div
+      class="md:hidden flex justify-center items-center transition duration-300 ease-in-out"
+      :class="{ 'opacity-0': scrollY > 0 }"
+    >
       <UIcon
         name="ic:round-menu"
         width="40"
@@ -56,11 +60,21 @@ export default {
     return {
       links: navbarLinks,
       showList: false,
+      scrollY: 0,
     };
+  },
+  mounted() {
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  beforeUnmount() {
+    window.removeEventListener("scroll", this.handleScroll);
   },
   methods: {
     toggleMenu() {
       this.showList = !this.showList;
+    },
+    handleScroll() {
+      this.scrollY = window.scrollY;
     },
   },
 };
