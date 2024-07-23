@@ -1,79 +1,69 @@
 <template>
   <div class="min-h-screen font-open-sans">
     <PageTitle :title="title" />
-    <div class="mb-4">
-      <UForm
-        :validate="validateForm"
-        :state="state"
-        :schema="contactSchema"
-        @submit.prevent="handleSubmit"
+    <UForm
+      :validate="validateForm"
+      :state="state"
+      :schema="contactSchema"
+      @submit="handleSubmit"
+    >
+      <div
+        class="grid grid-flow-row md:grid-flow-col items-center m-8 gap-6 md:gap-24"
       >
-        <div
-          class="grid grid-flow-row md:grid-flow-col items-center m-8 gap-6 md:gap-24"
+        <UFormGroup name="name" label="Name" size="lg" required>
+          <UInput
+            v-model="state.senderName"
+            variant="outline"
+            :ui="{ color: 'indigo' }"
+          />
+        </UFormGroup>
+        <UFormGroup name="email" label="Email" size="lg" required>
+          <UInput
+            v-model="state.senderEmail"
+            placeholder="email@gmail.com"
+            variant="outline"
+            :ui="{ color: 'indigo' }"
+          />
+        </UFormGroup>
+      </div>
+      <div class="items-center m-8">
+        <UFormGroup name="message" label="Message" size="lg" required>
+          <UTextarea
+            v-model="state.senderMessage"
+            variant="outline"
+            placeholder="Say Hi!"
+            :ui="{ color: 'indigo' }"
+            :rows="8"
+            :maxrows="12"
+            autoresize
+          />
+        </UFormGroup>
+      </div>
+      <div class="flex justify-center">
+        <button
+          class="px-8 p-2 bg-blue-800/80 rounded-md text-white"
+          type="submit"
+          :disabled="!validateForm"
+          :class="{
+            'opacity-50': !validateForm,
+            'hover:bg-blue-800/60': validateForm,
+          }"
         >
-          <UFormGroup name="name" label="Name" size="lg" required>
-            <UInput
-              v-model="state.senderName"
-              variant="outline"
-              :ui="{ color: 'indigo' }"
-            />
-          </UFormGroup>
-          <UFormGroup name="email" label="Email" size="lg" required>
-            <UInput
-              v-model="state.senderEmail"
-              placeholder="email@gmail.com"
-              variant="outline"
-              :ui="{ color: 'indigo' }"
-            />
-          </UFormGroup>
-        </div>
-        <div class="items-center m-8">
-          <UFormGroup name="message" label="Message" size="lg" required>
-            <UTextarea
-              v-model="state.senderMessage"
-              variant="outline"
-              placeholder="Say Hi!"
-              :ui="{ color: 'indigo' }"
-              :rows="8"
-              :maxrows="12"
-              autoresize
-            />
-          </UFormGroup>
-        </div>
-        <div class="flex justify-center">
-          <button
-            class="px-8 p-2 bg-blue-800/80 rounded-md text-white"
-            type="submit"
-            :disabled="!validateForm"
-            :class="{
-              'opacity-50': !validateForm,
-              'hover:bg-blue-800/60': validateForm,
-            }"
-          >
-            Send
-          </button>
-        </div>
-      </UForm>
-    </div>
+          Send
+        </button>
+      </div>
+    </UForm>
   </div>
 </template>
 
 <script setup lang="ts">
 import PageTitle from "../components/PageTitle.vue";
 import type { FormError, FormSubmitEvent } from "#ui/types";
-import { z } from "zod";
+import { contactSchema, type ContactSchema } from "../types/contactSchema";
 
 const toast = useToast();
 const mail = useMail();
 const title = "Contact";
-
-const contactSchema = z.object({
-  senderName: z.string().min(1, "Name required"),
-  senderEmail: z.string().email("Email required"),
-  senderMessage: z.string().min(1, "Message required"),
-});
-
-type ContactSchema = z.output<typeof contactSchema>;
 
 const state = reactive({
   senderName: "",
