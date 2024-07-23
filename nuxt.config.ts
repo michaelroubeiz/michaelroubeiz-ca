@@ -17,8 +17,29 @@ export default defineNuxtConfig({
       }
     },
   },
+
   devtools: { enabled: true },
-  modules: ["@nuxt/ui", "@nuxtjs/tailwindcss", "@nuxtjs/google-fonts", '@nuxt/eslint'],
+
+  modules: [
+    "@nuxt/ui",
+    "@nuxtjs/tailwindcss",
+    "@nuxtjs/google-fonts",
+    '@nuxt/eslint',
+    ['nuxt-mail', {
+      message: {
+        to: process.env.NUXT_MAIL_TARGET,
+      },
+      smtp: {
+        host: process.env.NUXT_MAIL_SMPT,
+        port: process.env.NUXT_MAIL_PORT,
+        auth: {
+          user: process.env.NUXT_MAIL_USERNAME,
+          pass: process.env.NUXT_MAIL_PASSWORD
+        }
+      },
+    }],
+  ],
+
   googleFonts: {
     families: {
       "Cairo": true,
@@ -31,4 +52,6 @@ export default defineNuxtConfig({
     useStylesheet: true,
     inject: true
   },
+
+  compatibilityDate: "2024-07-23",
 })
