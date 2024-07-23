@@ -30,7 +30,7 @@ export default defineNuxtConfig({
         to: process.env.NUXT_MAIL_TARGET,
       },
       smtp: {
-        host: process.env.NUXT_MAIL_SMPT,
+        host: process.env.NUXT_MAIL_SMTP,
         port: process.env.NUXT_MAIL_PORT,
         auth: {
           user: process.env.NUXT_MAIL_USERNAME,
