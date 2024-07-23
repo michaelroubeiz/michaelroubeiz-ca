@@ -28,10 +28,11 @@
           </UFormGroup>
         </div>
         <div class="items-center m-8">
-          <UFormGroup name="textarea" label="Message" size="lg" required>
+          <UFormGroup name="message" label="Message" size="lg" required>
             <UTextarea
               v-model="state.senderMessage"
               variant="outline"
+              placeholder="Say Hi!"
               :ui="{ color: 'indigo' }"
               :rows="8"
               :maxrows="12"
@@ -59,16 +60,17 @@
 
 <script setup lang="ts">
 import PageTitle from "../components/PageTitle.vue";
-
 import type { FormError, FormSubmitEvent } from "#ui/types";
 import { z } from "zod";
 
 const toast = useToast();
+const mail = useMail();
+const title = "Contact";
 
 const contactSchema = z.object({
-  senderName: z.string(),
-  senderEmail: z.string().email(),
-  senderMessage: z.string(),
+  senderName: z.string().min(1, "Name required"),
+  senderEmail: z.string().email("Email required"),
+  senderMessage: z.string().min(1, "Message required"),
 });
 
 type ContactSchema = z.output<typeof contactSchema>;
@@ -78,9 +80,6 @@ const state = reactive({
   senderEmail: "",
   senderMessage: "",
 });
-
-const mail = useMail();
-const title = "Contact";
 
 const sendMessage = async (event: FormSubmitEvent<ContactSchema>) => {
   try {
@@ -92,7 +91,10 @@ const sendMessage = async (event: FormSubmitEvent<ContactSchema>) => {
     addNotification();
     resetForm();
   } catch (error) {
-    console.error("Failed to send message", error);
+    throw createError({
+      statusCode: 500,
+      statusMessage: `Failed to send message: ${(error as Error).message}`,
+    });
   }
 };
 
@@ -111,16 +113,24 @@ const resetForm = () => {
   state.senderMessage = "";
 };
 
+const varToType = {
+  senderName: "Name",
+  senderEmail: "Email",
+  senderMessage: "Message",
+};
+
 const validateForm = (state: ContactSchema): FormError[] => {
-  const errors = [];
-  if (!state.senderName) {
-    errors.push({ path: "name", message: "Name required" });
-  }
-  if (!state.senderEmail) {
-    errors.push({ path: "email", message: "Email required" });
-  }
-  if (!state.senderMessage) {
-    errors.push({ path: "textarea", message: "Message required" });
+  const errors: FormError[] = [];
+  const validation = contactSchema.safeParse(state);
+
+  if (!validation.success) {
+    validation.error.errors.forEach((error) => {
+      const inputType = varToType[error.path[0] as keyof typeof varToType];
+      errors.push({
+        path: inputType.toLowerCase(),
+        message: `${inputType} required`,
+      });
+    });
   }
   return errors;
 };
