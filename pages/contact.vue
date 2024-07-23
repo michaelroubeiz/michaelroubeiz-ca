@@ -6,7 +6,7 @@
         :validate="validateForm"
         :state="state"
         :schema="contactSchema"
-        @submit="sendMessage"
+        @submit.prevent="handleSubmit"
       >
         <div
           class="grid grid-flow-row md:grid-flow-col items-center m-8 gap-6 md:gap-24"
@@ -81,7 +81,29 @@ const state = reactive({
   senderMessage: "",
 });
 
-const sendMessage = async (event: FormSubmitEvent<ContactSchema>) => {
+const varToType = {
+  senderName: "Name",
+  senderEmail: "Email",
+  senderMessage: "Message",
+};
+
+const validateForm = (state: ContactSchema): FormError[] => {
+  const errors: FormError[] = [];
+  const validation = contactSchema.safeParse(state);
+
+  if (!validation.success) {
+    validation.error.errors.forEach((error) => {
+      const inputType = varToType[error.path[0] as keyof typeof varToType];
+      errors.push({
+        path: inputType.toLowerCase(),
+        message: `${inputType} required`,
+      });
+    });
+  }
+  return errors;
+};
+
+const handleSubmit = async (event: FormSubmitEvent<ContactSchema>) => {
   try {
     await mail.send({
       from: event.data.senderEmail,
@@ -111,28 +133,6 @@ const resetForm = () => {
   state.senderName = "";
   state.senderEmail = "";
   state.senderMessage = "";
-};
-
-const varToType = {
-  senderName: "Name",
-  senderEmail: "Email",
-  senderMessage: "Message",
-};
-
-const validateForm = (state: ContactSchema): FormError[] => {
-  const errors: FormError[] = [];
-  const validation = contactSchema.safeParse(state);
-
-  if (!validation.success) {
-    validation.error.errors.forEach((error) => {
-      const inputType = varToType[error.path[0] as keyof typeof varToType];
-      errors.push({
-        path: inputType.toLowerCase(),
-        message: `${inputType} required`,
-      });
-    });
-  }
-  return errors;
 };
 </script>
 
