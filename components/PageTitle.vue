@@ -56,4 +56,12 @@ export default defineComponent({
 .hidden-letter {
   visibility: hidden;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in {
+    animation: none;
+    opacity: 1;
+    visibility: visible;
+  }
+}
 </style>
