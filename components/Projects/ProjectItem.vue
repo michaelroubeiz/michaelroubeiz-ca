@@ -10,6 +10,7 @@
             target="_blank"
             class="hover:text-blue-700 hover:underline underline-offset-4"
             :aria-label="projectItem.title"
+            rel="noopener noreferrer"
           >
             {{ projectItem.title }}
           </ULink>
@@ -24,6 +25,7 @@
         :aria-label="projectItem.githubLink"
         class="ml-auto hover:text-blue-700 rounded-full"
         target="_blank"
+        rel="noopener noreferrer"
       >
         <UTooltip text="github" :popper="{ placement: 'right' }">
           <UIcon name="mdi:github" width="24" height="24" dynamic />
