@@ -57,7 +57,7 @@
           />
         </UFormGroup>
       </div>
-      <div class="flex justify-center">
+      <div class="flex justify-center max-w-min mx-auto">
         <button
           class="px-8 p-2 bg-blue-800/80 rounded-md text-white"
           type="submit"
