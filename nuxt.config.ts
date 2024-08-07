@@ -17,9 +17,20 @@ export default defineNuxtConfig({
       }
     },
   },
-
+  compatibilityDate: "2024-07-23",
   devtools: { enabled: true },
-
+  googleFonts: {
+    families: {
+      "Cairo": true,
+      "Open Sans": true,
+      "Playwrite MX": true,
+      "Roboto Mono": true
+    },
+    display: "swap",
+    download: true,
+    useStylesheet: true,
+    inject: true
+  },
   modules: [
     "@nuxt/ui",
     "@nuxtjs/tailwindcss",
@@ -38,20 +49,6 @@ export default defineNuxtConfig({
         }
       },
     }],
+    "nuxt-security"
   ],
-
-  googleFonts: {
-    families: {
-      "Cairo": true,
-      "Open Sans": true,
-      "Playwrite MX": true,
-      "Roboto Mono": true
-    },
-    display: "swap",
-    download: true,
-    useStylesheet: true,
-    inject: true
-  },
-
-  compatibilityDate: "2024-07-23",
 })
