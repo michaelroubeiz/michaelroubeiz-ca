@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen">
+  <div>
     <PageTitle :title="title" />
     <DeveloperTitles :titles="developerTitles" />
     <div class="mt-4 text-2xl font-open-sans leading-9 space-y-2">

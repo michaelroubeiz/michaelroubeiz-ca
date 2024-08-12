@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen font-open-sans">
+  <div class="font-open-sans">
     <PageTitle :title="title" />
     <UForm
       :validate="validateForm"
