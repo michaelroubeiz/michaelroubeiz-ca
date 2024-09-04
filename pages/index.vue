@@ -14,7 +14,7 @@
 import PageTitle from "../components/PageTitle.vue";
 import DeveloperTitles from "../components/DeveloperTitles.vue";
 import SocialIcons from "../components/SocialIcons.vue";
-import { developerTitles } from "../data/developerTitles";
+import { developerTitles } from "~/data/developerTitles";
 
 export default {
   name: "WelcomeSection",

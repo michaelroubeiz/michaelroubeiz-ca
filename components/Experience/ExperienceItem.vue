@@ -28,7 +28,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import type { Experience } from "../../types/Experience";
+import type { Experience } from "~/types/Experience";
 
 export default defineComponent({
   name: "ExperienceItem",

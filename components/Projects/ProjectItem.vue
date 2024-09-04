@@ -48,7 +48,7 @@
 
 <script lang="ts">
 import { defineComponent, type PropType } from "vue";
-import type { Project } from "../../types/Project";
+import type { Project } from "~/types/Project";
 
 export default defineComponent({
   name: "ProjectItem",

@@ -52,7 +52,7 @@
 </template>
 
 <script lang="ts">
-import { navbarLinks } from "../data/navbarLinks";
+import { navbarLinks } from "~/data/navbarLinks";
 
 export default {
   name: "NavBar",

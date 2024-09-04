@@ -15,7 +15,7 @@
 import PageTitle from "../components/PageTitle.vue";
 import ProjectList from "../components/Projects/ProjectList.vue";
 import ProjectItem from "../components/Projects/ProjectItem.vue";
-import { projectData } from "../data/projects";
+import { projectData } from "~/data/projects";
 import type { Project } from "~/types/Project";
 
 export default {

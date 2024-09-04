@@ -78,7 +78,7 @@
 <script setup lang="ts">
 import PageTitle from "../components/PageTitle.vue";
 import type { FormError, FormSubmitEvent } from "#ui/types";
-import { contactSchema, type ContactSchema } from "../types/contactSchema";
+import { contactSchema, type ContactSchema } from "~/types/contactSchema";
 
 const toast = useToast();
 const mail = useMail();

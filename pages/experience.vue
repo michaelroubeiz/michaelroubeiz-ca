@@ -6,7 +6,7 @@
 </template>
 
 <script lang="ts">
-import { experienceData } from "../data/experience";
+import { experienceData } from "~/data/experience";
 import ExperienceList from "../components/Experience/ExperienceList.vue";
 import PageTitle from "../components/PageTitle.vue";
 

@@ -19,7 +19,7 @@
 </template>
 
 <script lang="ts">
-import { socialLinks } from "../data/socialLinks";
+import { socialLinks } from "~/data/socialLinks";
 
 export default {
   data() {
