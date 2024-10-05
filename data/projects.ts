@@ -19,7 +19,7 @@ export const projectData = [
         description: 'CommunityGrid aims to solve the problem of shared energy capacity congestion in low voltage networks. Specifically, this project aims to manage and optimize electric vehicle charging by using prioritization, scheduling, and prediction.',
         technologies: ['StripeAPI', 'Typescript', 'Next.js', 'React', 'Python', 'Docker', 'DigitalOcean', 'PostgreSQL', 'Cypress', 'Nginx', 'FastAPI'],
         projectLink: 'https://communitygrid.app',
-        projectLinkActive: true,
+        projectLinkActive: false,
         githubLink: 'https://github.com/jay-roe/CommunityGrid',
         publicGithubLink: false,
     },
